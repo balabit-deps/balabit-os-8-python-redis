@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# Run tests under Python 2.
+
+set -eux
+
+for X in $(pyversions -r 2>/dev/null)
+do
+	${X} setup.py test
+done
